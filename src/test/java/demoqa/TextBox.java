@@ -12,11 +12,12 @@ public class TextBox {
     @BeforeAll
     static void beforeAll(){
         Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com"
     }
     @Test
     void FillForm() {
         // Открыть сайт с формой
-        open("https://demoqa.com/text-box");
+        open("/text-box");
         $(".body-height").shouldHave(text("Text Box"));
         // В поле "Full Name" ввести ФИО
         $("#userName").setValue("Full Name test");
