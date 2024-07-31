@@ -12,6 +12,6 @@ public class successfulSearchTest {
     void successfulSearchTest() {
         open("https://www.google.com/");
         $(byName("q")).setValue("selenide").pressEnter();
-        $("#search").shouldHave(text("selenide.org"));
+        $("#rso").shouldHave(text("Selenide.org"));
     }
 }
